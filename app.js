@@ -41,7 +41,7 @@ app.get('/', (req, res) =>{
 
         Image.find({})
         .then((result)=> {
-            mongoose.connection.close()
+
             res.render('index' , {data: result})
         })
         .catch((err)=>console.log("err: "+err))

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upload File</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        Name: <input type="text" name="txt" id=""><br><br>
+        <input type="file" name="uploaded_file" id=""><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <% if(data){ %>
+        <table>
+            <% data.forEach(item => { %>
+
+                /uploads/<%=item.img %>
+            <td>name: <%=item.name %></td>
+            <td><img src="/uploads/<%=item.img %>" alt="imgs" width="250" height="250"></td>
+        </table>
+        <%}) %>
+    <% }%>
+
+
+</body>
+</html>

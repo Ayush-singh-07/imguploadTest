@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 //db conn
 
-mongoose.connect('mongodb+srv://admin-ayush:roronoaZoro7@atlascluster.wumy5wn.mongodb.net/testDB').then(()=>console.log("DB Connected"))
+mongoose.connect(""+process.env.DB_URL);
 
 const imageSchema = new mongoose.Schema({
     name: String,
